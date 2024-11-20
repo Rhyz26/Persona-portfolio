@@ -1,0 +1,136 @@
+/* General Reset */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a,
+button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #004d99;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header .menu-toggle {
+    display: none;
+    background: none;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+    color: #ffd700;
+}
+
+/* Responsive Navigation */
+header .nav-links {
+    flex-direction: column;
+    display: none;
+}
+
+header ul.show {
+    display: flex;
+}
+
+/* Main Content */
+.container {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem auto;
+    max-width: 900px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #004d99;
+    margin-bottom: 1rem;
+}
+
+p,
+ul {
+    margin: 1rem 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #004d99;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #004d99;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    header ul li {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .container {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+}
